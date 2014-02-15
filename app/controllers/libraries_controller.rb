@@ -13,8 +13,10 @@ class LibrariesController < ApplicationController
   end
 
   def create
+    lib = params[:library].permit(:name, :url)
+    LibraryWorker.perform_async(lib)
 
-    redirect_to "/"
+    redirect_to "/libraries"
   end
 
 end
