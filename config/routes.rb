@@ -1,15 +1,9 @@
 AdventureLibrary::Application.routes.draw do
-  get "pages/show"
-  get "pages/edit"
-  get "pages/new"
-  get "adventures/show"
-  get "adventures/edit"
-  get "adventures/new"
-  get "libraries/index"
+  root to: "libraries#index"
   resources :adventures do
     resources :pages
   end
-
+end
 #                Prefix Verb   URI Pattern                                        Controller#Action
 # ----------------------------------------------------------------------------------------------------
 #     adventure_pages GET    /adventures/:adventure_id/pages(.:format)          pages#index
@@ -28,4 +22,4 @@ AdventureLibrary::Application.routes.draw do
 #                     PATCH  /adventures/:id(.:format)                          adventures#update
 #                     PUT    /adventures/:id(.:format)                          adventures#update
 #                     DELETE /adventures/:id(.:format)                          adventures#destroy
-end
+
