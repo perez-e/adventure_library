@@ -1,10 +1,10 @@
 class AdventuresController < ApplicationController
   def index
-    @adventures = Adventure.all
+    @library = Library.find_by_url("http://google.com")
 
     respond_to do |f|
       f.html
-      f.json {render json: @adventures.to_json( include: [ :pages ] )   }
+      f.json {render json: @library.to_json( include: [ adventures: { include: [ :pages ] } ] )   }
     end
   end
 
