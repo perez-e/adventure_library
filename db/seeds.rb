@@ -8,7 +8,7 @@
 name = 'Eric'
 
 # url should be heroku url /adventure
-library = Library.create!(url: "http://google.com")
+library = Library.create!(url: "/adventures", name: "Eric's Library")
 
 adv = library.adventures.create!(:title => "#{name}'s Test Adventure",
   :author => name)
