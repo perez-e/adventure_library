@@ -44,7 +44,8 @@ end
 
 # Use unicorn as the app server
 gem 'unicorn'
-
+gem 'typhoeus'
+gem "json"
 gem 'sidekiq'
 
 # Use Capistrano for deployment
