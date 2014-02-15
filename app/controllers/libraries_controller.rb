@@ -6,6 +6,5 @@ class LibrariesController < ApplicationController
       f.html
       f.json { render json: @libraries.to_json( include: [ adventures: { include: [:pages] } ] )  }
     end
-
   end
 end
