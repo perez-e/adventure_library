@@ -11,4 +11,10 @@ class LibrariesController < ApplicationController
       f.json { render json: @libraries.to_json( include: [ adventures: { include: [:pages] } ] )  }
     end
   end
+
+  def create
+
+    redirect_to "/"
+  end
+
 end
