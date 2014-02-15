@@ -69,7 +69,7 @@ describe '/libraries' do
       it 'returns a list of known libraries' do
            get '/libraries.json'
            result = JSON.parse(response.body)
-           result.first["url"].should == @library.url
+           result['libraries'].first["url"].should == @library.url
       end
     end
 end

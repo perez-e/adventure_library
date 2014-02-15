@@ -21,7 +21,7 @@ class LibraryWorker
     response = Typhoeus.get(url)
     result = JSON.parse(response.body)
 
-    result.each do |lib|
+    result["libraries"].each do |lib|
       if Library.find_by_url(lib["url"]).nil?
         LibraryWorker.perform_async({name: lib["name"], url: lib["url"] })
       end
