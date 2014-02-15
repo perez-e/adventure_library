@@ -1,4 +1,8 @@
 class LibrariesController < ApplicationController
+
+  def homepage
+  end
+
   def index
     @libraries = Library.all
 

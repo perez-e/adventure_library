@@ -1,6 +1,6 @@
 class AdventuresController < ApplicationController
   def index
-    @library = Library.find_by_url("http://google.com")
+    @library = Library.find_by_url("/adventures")
 
     respond_to do |f|
       f.html
