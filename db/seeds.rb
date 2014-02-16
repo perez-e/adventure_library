@@ -13,7 +13,7 @@ library = Library.create!(url: "/adventures", name: "Eric's Library")
 adv = library.adventures.create!(:title => "#{name}'s Test Adventure",
   :author => name, :guid => SecureRandom.urlsafe_base64(10))
 adv.pages.create!(:name => "start",
-  :text => "This is a great text adventure which is beginning right now!  I can't wait to [[see the end|end]]")
+  :text => "This is a great text<br />adventure which is beginning right now!  I can't wait to<br />[[see the end|end]]")
 adv.pages.create!(:name => "end",
   :text => "Wow that adventure was amazing!")
   
