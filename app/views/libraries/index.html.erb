@@ -2,7 +2,7 @@
 
 
 <% @libraries.each do |library|  %>
-  <% if lib.url == "/adventures"  %>
+  <% if library.url == "/adventures"  %>
     <h3><%= link_to library.name, library.url %></h3>
   <% else %>
     <h3><%= link_to library.name, library.url+"/adventures" %></h3>
