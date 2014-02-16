@@ -4,7 +4,7 @@ class AdventuresController < ApplicationController
 
     respond_to do |f|
       f.html
-      f.json {render json: @library.to_json( include: [ adventures: { include: [ :pages ] } ] )   }
+      f.json {render json: Library.adventure_to_json(@library)}
     end
   end
 
