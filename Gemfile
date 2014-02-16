@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.0.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -48,8 +50,5 @@ gem 'typhoeus'
 gem "json"
 gem 'sidekiq'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'rails_12factor', :group => :production
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
