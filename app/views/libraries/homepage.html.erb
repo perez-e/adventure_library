@@ -3,7 +3,7 @@
 <%= form_for :library, url: "/libraries" do |f| %>
   <%= f.text_field :name, placeholder: "Name of library" %>
   <%= f.text_field :url, placeholder: "Paste URL here " %>
-  <%= f.submit "Add" %>
+  <%= f.submit "Add", class: "btn btn-primary" %>
   <p>Add to my collection!</p>
 <% end %>
 
